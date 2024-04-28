@@ -73,9 +73,6 @@
 						url: "/get",
 					}).done(function(data) {
 						// TODO: Change the image to the Gemini logo
-						// TODO: Change the format to markdown
-
-						// var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer"><md-block>' + data + '</md-block><span class="msg_time">' + str_time + '</span></div></div>';
 						var botHtml = '<div class="d-flex justify-content-start mb-4"><div class="img_cont_msg"><img src="https://i.ibb.co/fSNP7Rz/icons8-chatgpt-512.png" class="rounded-circle user_img_msg"></div><div class="msg_cotainer">' + marked.parse(data) + '<span class="msg_time">' + str_time + '</span></div></div>';
 						$("#messageFormeight").append($.parseHTML(botHtml));
 					});
