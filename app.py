@@ -56,7 +56,10 @@ def post_data(url, data):
 
 
 def is_technical(text):
-    client = OpenAI(api_key="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")
+    # Key: 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 
+    # client = OpenAI(api_key="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")
+    client = OpenAI(api_key="Add your API key here")
+
 
     response = client.chat.completions.create(model="gpt-3.5-turbo",
                                               messages=[{"role": "user", "content": f"Is this a technical problem? Answer yes or no: {text}"}])
